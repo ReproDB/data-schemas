@@ -3,7 +3,7 @@
   "$id": "https://reprodb.github.io/data-schemas/schemas/search_data.schema.json",
   "title": "SearchEntry Collection",
   "description": "Array of SearchEntry records. Each element: Searchable artifact entry with paper metadata, badges, author names, and institutional affiliations.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "type": "array",
   "items": {
     "$ref": "#/$defs/SearchEntry"
@@ -142,6 +142,23 @@
             "https://arxiv.org/abs/2301.12345"
           ],
           "title": "Appendix Url"
+        },
+        "paper_id": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Stable integer ID of the associated paper in papers.json. Null when no paper match was found.",
+          "examples": [
+            42
+          ],
+          "title": "Paper Id"
         },
         "award": {
           "anyOf": [

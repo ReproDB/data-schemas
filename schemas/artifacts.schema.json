@@ -3,7 +3,7 @@
   "$id": "https://reprodb.github.io/data-schemas/schemas/artifacts.schema.json",
   "title": "Artifact Collection",
   "description": "Array of Artifact records. Each element: A single research artifact associated with a conference paper.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "type": "array",
   "items": {
     "$ref": "#/$defs/Artifact"
@@ -134,6 +134,23 @@
             "https://arxiv.org/abs/2301.12345"
           ],
           "title": "Appendix Url"
+        },
+        "paper_id": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Stable integer ID of the associated paper in papers.json. Null when no paper match was found.",
+          "examples": [
+            42
+          ],
+          "title": "Paper Id"
         },
         "award": {
           "anyOf": [

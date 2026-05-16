@@ -3,7 +3,7 @@
   "$id": "https://reprodb.github.io/data-schemas/schemas/author_profiles.schema.json",
   "title": "AuthorProfile Collection",
   "description": "Array of AuthorProfile records. Each element: Unified author profile combining publication record, artifact metrics, and AE committee service.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "type": "array",
   "items": {
     "$ref": "#/$defs/AuthorProfile"
@@ -286,6 +286,22 @@
           "minimum": 0,
           "title": "Badges Reproducible",
           "type": "integer"
+        },
+        "paper_ids": {
+          "description": "Stable integer IDs referencing papers in papers.json that have evaluated artifacts.",
+          "items": {
+            "type": "integer"
+          },
+          "title": "Paper Ids",
+          "type": "array"
+        },
+        "papers_without_artifact_ids": {
+          "description": "Stable integer IDs referencing papers in papers.json that do NOT have evaluated artifacts.",
+          "items": {
+            "type": "integer"
+          },
+          "title": "Papers Without Artifact Ids",
+          "type": "array"
         },
         "category": {
           "description": "Research domain based on conferences published at: 'systems', 'security', 'both', or 'unknown'.",
