@@ -14,24 +14,7 @@
       "description": "A single research artifact associated with a conference paper.",
       "properties": {
         "conference": {
-          "description": "Conference abbreviation, e.g. 'OSDI', 'USENIXSEC', 'NDSS'. See CONFERENCE_NAMES for the full list.",
-          "enum": [
-            "ACSAC",
-            "ATC",
-            "CAIS",
-            "CHES",
-            "EUROSYS",
-            "FAST",
-            "NDSS",
-            "OSDI",
-            "PETS",
-            "SC",
-            "SOSP",
-            "SYSTEX",
-            "USENIXSEC",
-            "VEHICLESEC",
-            "WOOT"
-          ],
+          "description": "Conference abbreviation, e.g. 'OSDI', 'USENIXSEC', 'NDSS'. Discovered dynamically from sys/secartifacts folder structure.",
           "examples": [
             "OSDI"
           ],
